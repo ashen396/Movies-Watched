@@ -1,0 +1,50 @@
+{
+  "name": "movies-watched",
+  "version": "1.0.0",
+  "description": "A library to keep track of watched movies.",
+  "main": "main.js",
+  "build": {
+    "appId": "com.example.movieswatched",
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "minimumSystemVersion": "10.14.0"
+    }
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "file",
+        "path": "dist/mac/movies_watched.app"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashen396/Movies-Watched.git"
+  },
+  "author": "ashen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashen396/Movies-Watched/issues"
+  },
+  "homepage": "https://github.com/ashen396/Movies-Watched#readme",
+  "devDependencies": {
+    "electron": "^10.4.7",
+    "electron-builder": "^22.14.13"
+  }
+}
